@@ -1,0 +1,48 @@
+for covid: they can do nothing on their own, we are gonna have a set rate
+
+
+There are equations for the ventilator 
+1sr level: just oxygen (no pressure)
+
+C-pap and bipap: for consicous and moving patient
+
+C-PAP: continuous (no oxygen in simplest form, positive pressure) --> makes pressure inside lung go higer and patient might resist it, but very easy and cheap
+
+if oxygen is connected to cipap, we call it a ventilator
+
+Bipap: same as cipap but makes expiration easy --> by going down to 4 cmH2O (atmospheric pressure) in intervals -> this interval is set between 14 and 16
+
+we need a humidifer for both (has a small tank of ditilled water and is changed every couple of weeks) .. just room temperature, do not need to control temp
+
+both ones above do not need blood work and are non-invasive
+
+ventilator:
+we have 4 settings depending on the condition of the patient
+- CIMV: need xrays and samples that cannot be done at home (worst case scenario --> highest resistance possible to air coming in --> caused by collapsed/infiltrated lungs)
+would need a doctor to monitor .. get other things 
+- AC: assistend aor controlled ventilation 
+- PSV: Pressure support ventilation
+- BiPap (for weaning - make it non-invasive - oxygen would just be gping through the nose, most likely not needed)
+
+ventilators are invasive .. so you need a professional to insert tube or else you might kill the patient
+
+we monitor (with a different machine -- needed for everythong but bipap):
+- blood pressure
+- oxygen ceoncentration
+- respiratpry rate
+- heart rate
+
+ventilator should monitor:
+- pressure in lungs --> based on that we must 
+
+there is an equation depending on height and weight, we decide the fllowing three controls: 
+- tidal volume
+- respositoary rate
+- peep (pressure at end of expiration --> usually 3 cmH2O .. usuall
+
+oxygen goes into ventialtor (you control how much oxygen goes in from the oxygen tank/condensator), then the ventilator humidifies this oxygen with air and controls its pressure and interval 
+
+Common failure modes:
+- tube slips to one lung (use stetoscope --> make sure air entry is equal bi-lateral)
+- leakeage in connection (literallu go through connection manually)
+- tube clog (by mucus or saliva -> use a small machine to eshfot)
