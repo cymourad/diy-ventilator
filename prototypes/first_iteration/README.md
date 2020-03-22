@@ -34,7 +34,10 @@ Nicolas was looking into ways to disinfect the exhaled air. His conclusion was t
 
 ### Power
 We decided to use a DC motor because:
-* it is readily-aviable, 
+* it is readily-avaible, 
 * it is easy to control its speed, 
 * it is easy to run it on a battery, and
 * it is relatively easiser to run on AC power with readily-avaible adapters for different systems.
+
+### Volume Control
+Traditionally, to control the volume of the air that the fan blower can push, the manual of the 
