@@ -1,12 +1,12 @@
 # DIY-Ventilator
 This is an attempt to make a simple DIY Ventilator using:
-1. Standard mask, tubes, and Y-piece;
+1. Standard mask, tubes, and Y-piece(s);
 2. 3D printer and filament;
-3. Arduino;
+3. Arduino baord and modules/sensors;
 4. Choice of battery that outputs ## V and has capacity of ##;
-5. AC / DC motor model #### (or a selection of motors);
+5. DC motor model #### (or a equivalent motors);
 6. Oxygen Condensator (or tank -> T.B.D.);
-7. UV light / ULPA (device used to disinfect exhaled air -> T.B.D.)
+7. HEPA filters
 
 ***
 ## WARNING
@@ -20,7 +20,7 @@ This respository hosts the source code of two identical mobile applications (IOS
 ### 2. fw (FirmWare)
 This directory contains the firmware code that would run on the Arduino baord to control the ventilator.
 ### 3. mech (Mechanical)
-This directory contains the CAD files used to 3D print the custom parts of the ventilator.
+This directory contains the CAD files used to 3D print the custom parts of the ventilator, and the readily-avialble parts we bought.
 ### 4. prototypes
 This directory is a sandbox for the team to share their early-stage design ideas, sketches, prototypes, etc.
 ### 5. resources

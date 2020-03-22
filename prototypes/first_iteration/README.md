@@ -40,4 +40,8 @@ We decided to use a DC motor because:
 * it is relatively easiser to run on AC power with readily-avaible adapters for different systems.
 
 ### Volume Control
-Traditionally, to control the volume of the air that the fan blower can push, the manual of the 
+Traditionally, the datasheet of a fan blower contains a table relating angular speed to volumetric flow rate. Once we know one of these relations, we can use the equation found [here](https://www.axair-fans.co.uk/news/applications/understanding-basic-fan-laws/) to find the new speed required for the desired volumetric flow rate (this desired volumetric flow rate can be calculated from the desied tidal volume, the size of the nozzle and the respiratory rate).
+As for the volume of the exhaled air, it can be calculated using pressure sensors as shown [here](https://www.sensortips.com/featured/calculate-flow-pressure-measurement/).
+
+### Pressure Control
+The valve controls the pressure going to the patient by changing the diameter of the valve. [This calculator](http://irrigation.wsu.edu/Content/Calculators/Sprinkler/Nozzle-Requirements.php) helps build intuition towards the relationship between the diameter of the nozzle (valve in our case) and the new flow rate of the water (given the initial pressure of the fluid coming in from the fan blower).
