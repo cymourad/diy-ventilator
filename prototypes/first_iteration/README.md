@@ -14,16 +14,20 @@ Common themes that we decided to kee through our design cycles were:
 * keep it simple: do not include functionality, features, or components that are not needed for most users (to minimize modes of failures and for ease of assembly and use)
 
 ## First design
-We quickly came up with this first design, that was dismissed after for being a tab too complex.
+We quickly came up with this first design, that was dismissed after for being a tad too complex.
 ![first design with pistons, cam-shaft, mixer chamber, and two pressure chambers](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/first_iteration/first_design_pistons.jpeg "First Design with pistons and cam-shafts and mixer")
 Starting from the right, a mixing chamber takes compressed air from a compressor and an oxyen tank or an oxyen concentrator. The FiO2 is controlled with a valve that connects the oxygen source to this mixing chamber.
-Then, the air goes into a pressure chamber. A DC motor rotates a shaft and a cam that pushes a piston to compress the air in the pressure chamber and 
+Then, the air goes into a pressure chamber. A DC motor rotates a shaft and a cam that pushes a piston to compress the air in the pressure chamber and pushes it out to a valve that controls the pressure (and volume) of the air going out to the patient. Then, the valvev connects to a Y-piece that connects on one side to the tube and mask going out to the patient, and on the other side to a tube that contains a pressure sensor and connects to a pressure chamber that sucks the air back to simulate an exhale. The second pressure chamber is operated by the same DC motor and shat but a different sized cam.
 
 ## Second design
 We examined the design and found some repition (compressing the air twice first with the compressor then with the piston, using two pressure chambers for inhale and exhale). Also, since the cam had a set size, it was difficult to provide two different pressures from one pressure chamber (IPAP and EPAP). So, we decided to come up with another idea and compare the two.
 We decided to use a blower fan and a valve to compress the air instead of the pressure chambers. This simplified our desing quite a bit as seen in the sketch below.
 ![second design with blower fan and valve](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/first_iteration/second_design_fan.jpeg "Second design with blower fan and valve")
-Starting from the right, a DC motor runs a blowing fan 
+Starting from the right, a DC motor runs a blowing fan into a chamber that connects to a valve. There are a few modules that are optional to add here: a Y-piece that can let oxygen in with a valve nad/or a humidifer. Whether these modules are connected or not, a Y-piece is then connected. The Y-piece ends with a tube and a mask. The other side of the Y-piece measures the pressure of the air exhaled out of the patient and passes it through a filter before goin back to the room. It is also an option to include a disinfection unit before letting the air out.
+At this point we knew that we had three things to control, and this is how this design controls them:
+* **Respiratpry rate**: timer set on valve to open and close
+* **Tidal volume**: speed of DC motor
+* **Pressure**: how much the valve closes
 
 ### Disinfection
 Nicolas was looking into ways to disinfect the exhaled air. His conclusion was that the cheapest and easiest way is to pass the exhaled air over concentrated bleech before letting it back in the room. John added that filters should be incorporated at the end of that disinfection chamber before letting the air out to keep the PH level of the room.
