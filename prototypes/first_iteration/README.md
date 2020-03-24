@@ -38,6 +38,7 @@ We decided to use a DC motor because:
 * it is easy to control its speed, 
 * it is easy to run it on a battery, and
 * it is relatively easiser to run on AC power with readily-avaible adapters for different systems.
+Upon some internet research, it seems like we might be able to use a phone charger to power the arduino and potentially a power bank as the battery as well. It will def supply the needed voltage, the question is the current. Also, seems like some chargers might not have isolation or negotiate voltage with Arduino, so must give users instructions on how to make sure the charger they use works for the Arduino.
 
 ### Volume Control
 Traditionally, the datasheet of a fan blower contains a table relating angular speed to volumetric flow rate. Once we know one of these relations, we can use the equation found [here](https://www.axair-fans.co.uk/news/applications/understanding-basic-fan-laws/) to find the new speed required for the desired volumetric flow rate (this desired volumetric flow rate can be calculated from the desied tidal volume, the size of the nozzle and the respiratory rate).
