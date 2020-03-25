@@ -12,6 +12,7 @@ Action list for our meeting on March 25, 2020:
 * figure out the parameters needed to run in Bi-PAP and C-PAP modes (what we should ask the user to provide) and how to translate them into:
 1. speed of fan blower, 
 2. position of pressure valves, and 
-3. delays between switching the flow traffic from
+3. delays when diverting flow between PIP and PEEP.
+
 I think the diagram below might help us with this third task.
-![main Bi-PAP ventilation controls](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/second_iteration/main_controls.jpeg "Main Bi-PAP Ventilation Controls")
+![main Bi-PAP ventilation controls](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/second_iteration/main_controls.png "Main Bi-PAP Ventilation Controls")
