@@ -14,4 +14,4 @@ Then, the user must indicate which mode they want to operate in (the tutorials g
 * C-PAP (patient is conscious but having difficulty breathing)
 * Assist (difficult is back to normal brething but sometimes skips a breath)
 
-The user must also enter the height, weight, age and sex of the patient for the machine to calculate some parameters. Moreover, the user can choose to have more manual control and enter a set pressure for the C-PAP mode or set low and high pressures (IPAP and EPAP) for the Bi-PAP mode.
+The user must also enter the height, weight, age and sex of the patient for the machine to calculate some parameters. Moreover, the user can choose to have more manual control and enter a set pressure for the C-PAP mode or set low and high pressures (PIP and PEEP) for the Bi-PAP mode.

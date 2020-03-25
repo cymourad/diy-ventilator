@@ -47,49 +47,49 @@ Describe the sesnors/mechanisms needed to ensure the ventilator behaves as expec
 ## Engineering Tests
 The following tests were used when developing the machine and we encourage anyone who decides to fork this design to run them when they make modifications. We would also encourage all developers and health professionals to add other tests as they see fit, or reach out to us to add them.
 
-### Engineering Test 1 - Min IPAP and min IPAP
+### Engineering Test 1 - Min PIP and min PIP
 ##### Settings
 | Setting   | Configuration   |
 |-----------|-----------------|
 | Mode | Bi-PAP |
-| IPAP | 10 cmH2O |
-| EPAP | 4 cmH2O |
+| PIP | 10 cmH2O |
+| PEEP | 4 cmH2O |
 ##### Expected Ventilator Behavior
 The ventilator can supply the minimum inspiratory pressure and the minimum expiratory pressure.
 ##### How to Meausre the Success of the Test
 Connect mask to pressure sensor to measure inspiratory pressure and use the sensor at the Y-piece to meausre the epiratory pressure.
 
-### Engineering Test 2 - Max IPAP and max EPAP
+### Engineering Test 2 - Max PIP and max PEEP
 ##### Settings
 | Setting   | Configuration   |
 |-----------|-----------------|
 | Mode | Bi-PAP |
-| IPAP | 40 cmH2O |
-| EPAP | 20 cmH2O |
+| PIP | 40 cmH2O |
+| PEEP | 20 cmH2O |
 ##### Expected Ventilator Behavior
 The ventilator can supply the maximum inspiratory pressure and the maximum expiratory pressure.
 ##### How to Meausre the Success of the Test
 Connect mask to pressure sensor to measure inspiratory pressure and use the sensor at the Y-piece to meausre the epiratory pressure.
 
-### Engineering Test 3 - Max IPAP and min EPAP
+### Engineering Test 3 - Max PIP and min PEEP
 ##### Settings
 | Setting   | Configuration   |
 |-----------|-----------------|
 | Mode | Bi-PAP |
-| IPAP | 40 cmH2O |
-| EPAP | 4 cmH2O |
+| PIP | 40 cmH2O |
+| PEEP | 4 cmH2O |
 ##### Expected Ventilator Behavior
 The ventilator can supply the maximum inspiratory pressure and the minimum expiratory pressure.
 ##### How to Meausre the Success of the Test
 Connect mask to pressure sensor to measure inspiratory pressure and use the sensor at the Y-piece to meausre the epiratory pressure.
 
-### Engineering Test 4 - Min IPAP and max EPAP
+### Engineering Test 4 - Min PIP and max PEEP
 ##### Settings
 | Setting   | Configuration   |
 |-----------|-----------------|
 | Mode | Bi-PAP |
-| IPAP | 10 cmH2O |
-| EPAP | 20 cmH2O |
+| PIP | 10 cmH2O |
+| PEEP | 20 cmH2O |
 ##### Expected Ventilator Behavior
 The ventilator cannot supply an inspiratory pressure that is higher than the expiratory pressure.
 ##### How to Meausre the Success of the Test
@@ -100,8 +100,8 @@ Ventilator errors out.
 | Setting   | Configuration   |
 |-----------|-----------------|
 | Mode | Bi-PAP |
-| IPAP | 20 cmH2O |
-| EPAP | 8 cmH2O |
+| PIP | 20 cmH2O |
+| PEEP | 8 cmH2O |
 ##### Expected Ventilator Behavior
 The ventilator can supply an average inspiratory pressure and an average expiratory pressure.
 ##### How to Meausre the Success of the Test
