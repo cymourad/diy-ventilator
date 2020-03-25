@@ -13,3 +13,5 @@ Action list for our meeting on March 25, 2020:
 1. speed of fan blower, 
 2. position of pressure valves, and 
 3. delays between switching the flow traffic from
+I think the diagram below might help us with this third task.
+![main Bi-PAP ventilation controls](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/second_iteration/main_controls.jpeg "Main Bi-PAP Ventilation Controls")
