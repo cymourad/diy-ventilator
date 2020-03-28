@@ -11,20 +11,30 @@ String inData = "";
 // CONSTANTS
 int LED = 13; // most arduino boards have an onboard LED on pin 13 (used to identify program status)
 int BAUD_RATE = 9600;
+const int EXHALE_PROXIMAL_FLOW_SENSOR = 1;
+const int INHALE_PROXIMAL_FLOW_SENSOR = 0;
 
 // Operation variables
 int FiO2 = 20; // default is 20% FiO2
+int humidityLevelReference = 55; // default relative humidity is 55 [%] 
+int temperatureReference = 37; // deafult air temperature 
 int respiratpryRate = 16; // deafult respiratory rate is 16 [breaths/min]
+int iPortion = 1; // the I in the I:E ratio
+int ePortion = 2; // the E in the I:E ratio
 int pip = 16; // default PIP (inspritation pressure in Bi-PAP mode) is 16 [cmH2O]
 int peep = 6; // default PEEP (inspritation pressure in Bi-PAP mode) is 6 [cmH2O]
-int constantPressure = 10; // default constant pressure in C-PAP mode is 10 [cmH2O]
+
+bool isHumidifying = false;
 
 // Helper variables
 String prevSettings = "";
 char operationMode = "A"; // default is assist mode
-int inhalePeriod = 500; // inhale time per breath [ms]
+double breathPeriod = 4000; // [milli-seconds/breath]
+int inhalePeriod = 1000; // inhale time per breath [ms]
 int exhalePeriod = 500; // exhale time per breath [ms]
 int timeToExecuteOtherCycles = 10; // time taken by cycles in loop() [ms]
+int currentHumidity = 55; // the current sensor reading of the humidity
+int currentTemperature = 37; // the current sensor reading of the temperature
 
 void setup() { // called once pers startup
 
@@ -77,6 +87,23 @@ void loop() { // continuous loop
 //    }
     
   // ACTUAL CONTROL CODE
+
+  // make sure humidity and temperature match the desired settings
+  if (isHumidifying) {
+
+    // TODO monitor humidity level (populate currentHumidity)
+    readHumidityTemperatureSensor();
+
+    // TODO coorect the humidity / temperature if it does not match the desired one
+    if (currentHumidity != humidityLevelReference) {
+      if (currentTemperature <= temperatureReference && currentHumidity < humidityLevelReference) {
+        turnHeaterOn();
+      }
+      else if (currentTemperature >= temperatureReference && currentHumidity > humidityLevelReference) {
+        turnHeaterOff();
+      }
+    }
+  }
   
   // Mode of operation and its parameters
   switch (operationMode) {
@@ -89,6 +116,8 @@ void loop() { // continuous loop
       // TODO divert the flapper to open the PEEP channel (exhale pressure)
       delay(exhalePeriod - timeToExecuteOtherCycles); // TODO change to the excat exhale time needed minus an estimate of cycles lost performing other tasks in the loop
       
+      // TODO check the exhale flow meter to make sure tidal volume is good
+
       break;
 
     case "C": // C-PAP mode
@@ -105,20 +134,47 @@ void loop() { // continuous loop
 
 void applyNewSettings(String inData) {
   
-  // FiO2 percentage
+  // FiO2
   switch (inData.charAt(1)) {
 
     case 1: // O2 source is connected
 
-      FiO2 = int(inData.charAt(2)) * 10; // FiO2 % (in increments of 10)
+      FiO2 = int(inData.charAt(2)) * 10; // FiO2 (in increments of 10)
 
       if (FiO2 = 10) FiO2 = 100; // dirty solution to allow 100% (by writing 1, cuz we cant have 10% anyway)
 
-      // TODO set oxygen valve to allow desired FiO2 %
+      // TODO set oxygen flow regulator to allow desired FiO2 !!manually!!
+      // TODO and adjust the speed of the fan to provide appropriate total flow and FiO2
+
 
       break;
+    
+    case 0: // O2 is not connected
+      // TODO make sure the input flow-meter reading matches the expected flow calcualted for the fan and correct it if needed
+      break;
 
-    default: // if O2 source is not connected, do nothing
+    default: // wrong string was sent, do nothing (and flash light to indicate wrong string)
+      Serial.println("Wrong settings string sent, the oxygen status must be 0 or 1!");
+      failureLEDalert(5); // falsh LED 5 times to tell the user they sent faulty settings
+      break;
+  }
+
+  // Humidity and temperature
+  switch (inData.charAt(3)) {
+
+    case 1: // humidifer is connected
+      isHumidifying = true; // set a bool to monitor humidity
+      humidityLevelReference = int(inData.charAt(4)) * 10 + int(inData.charAt(5));
+      temperatureReference = int(inData.charAt(6)) * 10 + int(inData.charAt(7));
+      break;
+
+    case 0: // humudifier is not connected
+      isHumidifying = false;
+      break;
+    
+    default: // wrong string was sent, do nothing (and flash light to indicate wrong string)
+      Serial.println("Wrong settings string sent, the humidifier status must be 0 or 1!");
+      failureLEDalert(5); // falsh LED 5 times to tell the user they sent faulty settings
       break;
   }
 
@@ -130,14 +186,16 @@ void applyNewSettings(String inData) {
 
       operationMode = "B"; // setting the operation mode
 
-      // get the 3 parameters needed to operate on Bi-PAP from the control string
-      respiratpryRate = int(inData.charAt(3)) * 10 + int(inData.charAt(4));
-      pip = int(inData.charAt(5)) * 10 + int(inData.charAt(6));
-      peep = int(inData.charAt(7)) * 10 + int(inData.charAt(8));
+      // get the 4 parameters needed to operate on Bi-PAP from the control string
+      respiratpryRate = int(inData.charAt(8)) * 10 + int(inData.charAt(9));
+      iPortion = int(inData.charAt(10));
+      ePortion = int(inData.charAt(11));
+      pip = int(inData.charAt(12)) * 10 + int(inData.charAt(13));
+      peep = int(inData.charAt(14)) * 10 + int(inData.charAt(15));
 
       // TODO calculate intervals of inhale and exhale (inhalePeriod and exhalePeriod) based on the new respiratory rate
-
-      // TODO adjust the PIP and PEEP valves to new settings
+      breathPeriod = 60 * 1000 / respiratpryRate; // [ms]
+      inhalePeriod = breathPeriod * iPortion / (iPortion + ePortion)
 
       break;
 
@@ -147,7 +205,7 @@ void applyNewSettings(String inData) {
       operationMode = "C"; // setting the operation mode
 
       // get the required parameter from the control string
-      constantPressure = int(inData.charAt(5)) * 10 + int(inData.charAt(6));
+      peep = int(inData.charAt(5)) * 10 + int(inData.charAt(6));
 
       // TODO set the PEEP valve to satisfy this constant pressure setting
 
@@ -165,8 +223,7 @@ void applyNewSettings(String inData) {
       break;
 
     default: // wrong string was sent, do nothing (and flash light to indicate wrong string)
-      Serial.println("Wrong settings string sent, the operation mode must be A, B, C, or T!");
-      failureLEDalert(5); // falsh LED 5 times to tell the user they sent faulty settings
+      wrongSettingStringAlert("Wrong settings string sent, the operation mode must be A, B, C, or T!");
       break;
   }
 }
@@ -179,6 +236,12 @@ void testHM10() {
   }
 }
 
+// in case of a wrong settings string, output instructons to Serial (and maybe bluetooth later) and flash LED tiidicate error
+void wrongSettingStringAlert(String message) {
+  Serial.println(message);
+  failureLEDalert(5); // falsh LED 5 times to tell the user they sent faulty settings
+}
+
 // flash LED to signal that something failed
 void failureLEDalert(int seconds) {
   for (int i = seconds; i < 5; i++) {
@@ -187,4 +250,48 @@ void failureLEDalert(int seconds) {
     digitalWrite(LED, LOW);
     delay(500);
   }
+}
+
+// read the humidity sensor to find realtive humidity and temp
+void readHumidityTemperatureSensor() {
+  // THOUGHT might need to average or compare to old values in case of noise
+  currentHumidity = 100; // TODO fill this reading correctly
+  currentTemperature = 90; // TODO fill this reading correctly
+}
+
+void turnHeaterOn() {
+  // TODO send voltage to turn the heater ON
+}
+
+void turnHeaterOff() {
+  // TODO send voltage to turn the heater OFF
+}
+
+void applyPressure(int pressure) {
+  // TODO send voltage to apply
+}
+
+double readFlow(int sensorNumber) {
+  // TODO read value of proximal flow sensor and return it in milli-Liter per second [mL/s]
+  return 5;
+}
+
+// apply appropriate voltage to fan blower to achieve desired total flow [mL/sec]
+void changeFanSpeedToAchieveFlow(int desiredFlow) {
+  // TODO read current flow
+  double currentFlow = readFlow(INHALE_PROXIMAL_FLOW_SENSOR);
+  // TODO change speed of fan till flow matches desired flow (might need to allow for some tolerance --> while(currentFlow < desiredFlow * 0.95 && currentFlow > desiredFlow * 1.05))
+  while(currentFlow != desiredFlow) {
+    if (currentFlow < desiredFlow) { // need to make fan go faster
+      // TODO set this to an incremental speed
+      setFanSpeed(10);
+    } else { // need to make fan go slower
+      // TODO set this to a decremental speed
+      setFanSpeed(10);
+    }
+  }
+}
+
+void setFanSpeed(int speed) {
+  // TODO apply voltage to fan to set its speed
 }
