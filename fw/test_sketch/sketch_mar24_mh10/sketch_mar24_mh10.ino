@@ -31,7 +31,7 @@ String prevSettings = "";
 char operationMode = "A"; // default is assist mode
 double breathPeriod = 4000; // [milli-seconds/breath]
 int inhalePeriod = 1000; // inhale time per breath [ms]
-int exhalePeriod = 500; // exhale time per breath [ms]
+int exhalePeriod = 2000; // exhale time per breath [ms]
 int timeToExecuteOtherCycles = 10; // time taken by cycles in loop() [ms]
 int currentHumidity = 55; // the current sensor reading of the humidity
 int currentTemperature = 37; // the current sensor reading of the temperature
@@ -68,6 +68,7 @@ void loop() { // continuous loop
     if (inData != prevSettings) {
       Serial.println("New settings!"); // for debugging
       applyNewSettings(inData);
+      prevSettings = inData;
     }
     
     Serial.println(inData);
@@ -110,10 +111,10 @@ void loop() { // continuous loop
 
     case "B": // Bi-PAP mode
 
-      // TODO divert the flapper to open the PIP channel (inhale pressure)
+      setPressureRegulator(pip); // TODO set the pressure regulator to the PIP
       delay(inhalePeriod); // TODO change to the exact inhale time needed 
 
-      // TODO divert the flapper to open the PEEP channel (exhale pressure)
+      setPressureRegulator(peep); // TODO set the pressure regulator to the PEEP
       delay(exhalePeriod - timeToExecuteOtherCycles); // TODO change to the excat exhale time needed minus an estimate of cycles lost performing other tasks in the loop
       
       // TODO check the exhale flow meter to make sure tidal volume is good
@@ -186,16 +187,7 @@ void applyNewSettings(String inData) {
 
       operationMode = "B"; // setting the operation mode
 
-      // get the 4 parameters needed to operate on Bi-PAP from the control string
-      respiratpryRate = int(inData.charAt(8)) * 10 + int(inData.charAt(9));
-      iPortion = int(inData.charAt(10));
-      ePortion = int(inData.charAt(11));
-      pip = int(inData.charAt(12)) * 10 + int(inData.charAt(13));
-      peep = int(inData.charAt(14)) * 10 + int(inData.charAt(15));
-
-      // TODO calculate intervals of inhale and exhale (inhalePeriod and exhalePeriod) based on the new respiratory rate
-      breathPeriod = 60 * 1000 / respiratpryRate; // [ms]
-      inhalePeriod = breathPeriod * iPortion / (iPortion + ePortion)
+      readFourBreatingParamsFromSettingsString();
 
       break;
 
@@ -205,16 +197,27 @@ void applyNewSettings(String inData) {
       operationMode = "C"; // setting the operation mode
 
       // get the required parameter from the control string
-      peep = int(inData.charAt(5)) * 10 + int(inData.charAt(6));
+      int peepSent = int(inData.charAt(14)) * 10 + int(inData.charAt(15));
+      if (peepSent < 4 || peepSent > 20) {
+        wrongSettingStringAlert("Wrong settings string sent, the PEEP must be between 4 and 20 cmH2O!");
+      } else {
+        peep = peepSent;
+      }
 
       // TODO set the PEEP valve to satisfy this constant pressure setting
+      setPressureRegulator(peep);
 
-      // TODO fix the flapper to only let PEEP channel to patient (deafult flapper posisiton)
+      // TODO adjust flow in
 
       break;
 
     case "A": // Assist mode
-      // average readings from pressure sensor to find PIP, PEEP, inhalePeriod and exhalePeriod
+      Serial.println("Setting ventilator to Assist mode"); // for debugging
+
+      operationMode = "A"; // setting the operation mode
+
+      readFourBreatingParamsFromSettingsString();
+
       break;
 
     case "T": // Test mode
@@ -226,6 +229,42 @@ void applyNewSettings(String inData) {
       wrongSettingStringAlert("Wrong settings string sent, the operation mode must be A, B, C, or T!");
       break;
   }
+}
+
+// save the 4 parameters needed to operate on Bi-PAP/Assist mode from the control string to the global variables
+void readFourBreatingParamsFromSettingsString() {
+  // Respiratory Rate
+  int respiratpryRateSent = int(inData.charAt(8)) * 10 + int(inData.charAt(9));
+  if (respiratpryRateSent < 4 || respiratpryRateSent > 60) {
+    wrongSettingStringAlert("Wrong settings string sent, the respiratory rate must be between 4 and 60 breaths/min!");
+  } else {
+    respiratpryRate = respiratpryRateSent;
+  }
+
+  // I:E Ratio
+  iPortion = int(inData.charAt(10));
+  ePortion = int(inData.charAt(11));
+
+  // PIP
+  int pipSent = int(inData.charAt(12)) * 10 + int(inData.charAt(13));
+  if (pipSent < 4 || pipSent > 40) {
+    wrongSettingStringAlert("Wrong settings string sent, the PIP must be between 4 and 60 cmH2O!");
+  } else {
+    pip = pipSent;
+  }
+
+  // PEEP
+  int peepSent = int(inData.charAt(14)) * 10 + int(inData.charAt(15));
+  if (peepSent < 4 || peepSent > 20) {
+    wrongSettingStringAlert("Wrong settings string sent, the PEEP must be between 4 and 20 cmH2O!");
+  } else {
+    peep = peepSent;
+  }
+
+  // calculate intervals of inhale and exhale (inhalePeriod and exhalePeriod) based on the new respiratory rate
+  breathPeriod = 60 * 1000 / respiratpryRate; // [ms]
+  inhalePeriod = breathPeriod * iPortion / (iPortion + ePortion); // [ms]
+  exhalePeriod = breathPeriod - inhalePeriod; // [ms]
 }
 
 // can use this function to test the HM-10 Module
@@ -267,7 +306,7 @@ void turnHeaterOff() {
   // TODO send voltage to turn the heater OFF
 }
 
-void applyPressure(int pressure) {
+void setPressureRegulator(int pressure) {
   // TODO send voltage to apply
 }
 
