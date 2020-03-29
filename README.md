@@ -30,14 +30,13 @@ This directory includes User Acceptance Tests (UAT) to run on the assembled vent
 ### 7. tutorials
 This directory includes the tutroials that the app will feature to educate operators on the assembly and use of the ventilator.
 
-## Credits
+## Team
 I am by no means working on this project alone. The team who is contributing to this project with different capacities, according to their expertise, is comprised of:
-* Bishoy Mikhail
 * Abanoub Rizk
+* Abanoub Slaib 
+* Bishoy Mikhail
+* Hani Zaki
+* Marina Saad
 * Nicolas Mourad
 * Youhanna Iskander
-* Hani Zaki
-* Magued
-* Ehab Saad
-* Sherine Saad
-* Marina Saad
+* Youssed Zaki

@@ -4,7 +4,7 @@
 #include <SoftwareSerial.h>
 SoftwareSerial HM10(2, 3); // RX = 2, TX = 3
 char appData;  
-String inData = "";
+int inData = 5;
 void setup()
 {
   Serial.begin(9600);
@@ -21,7 +21,7 @@ void loop()
   while (HM10.available() > 0) {   // if HM10 sends something then read
     Serial.println("HM-10 is available!");
     appData = HM10.read();
-    inData = String(appData);  // save the data in string format
+    inData = int(appData);  // save the data in string format
     Serial.write(appData);
   }
 
@@ -30,12 +30,12 @@ void loop()
     delay(10);
     HM10.write(Serial.read());
   }
-  if ( inData == "F") {
+  if ( inData == 0) {
     Serial.println("LED OFF");
     digitalWrite(13, LOW); // switch OFF LED
     delay(500);
   }
-  if ( inData == "N") {
+  if ( inData == 1) {
     Serial.println("LED ON");
     digitalWrite(13, HIGH); // switch OFF LED
     delay(500);
