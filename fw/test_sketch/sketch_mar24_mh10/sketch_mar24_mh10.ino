@@ -1,6 +1,3 @@
-// https://circuitdigest.com/microcontroller-projects/how-to-use-arduino-and-hm-10-ble-module-to-control-led-with-android-app
-// used this tutorial
-
 #include <SoftwareSerial.h> // will allow us to use the serial communication library
 
 SoftwareSerial HM10(2, 3); // RX = 2, TX = 3 on the HM-10 Module itself
