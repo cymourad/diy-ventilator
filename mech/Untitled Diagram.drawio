@@ -1,20 +1,185 @@
-<mxfile host="app.diagrams.net" modified="2020-03-29T21:34:30.399Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36" etag="mROUE_aEdjxZNkLqneNd" version="12.9.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-03-29T22:21:06.494Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36" etag="W0cIQgK8fZU6FrF9RDxE" version="12.9.4" type="github">
   <diagram id="v8ACqfiUcGcU-FBjuVRV" name="Page-1">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/car-parts-18/64/radiator-fan-engine-cooling-ventilator-128.png" vertex="1" parent="1">
-          <mxGeometry x="112" y="140" width="128" height="128" as="geometry" />
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.05;entryY=0.9;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-1" target="cKnyVmgL8Dwh8mg7-z-A-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-1" value="Brushless DC Motor Blower" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/car-parts-18/64/radiator-fan-engine-cooling-ventilator-128.png" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="70" height="70" as="geometry" />
         </mxCell>
         <mxCell id="cKnyVmgL8Dwh8mg7-z-A-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-2" target="cKnyVmgL8Dwh8mg7-z-A-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cKnyVmgL8Dwh8mg7-z-A-2" value="O2 Tank" style="shape=mxgraph.pid.vessels.tank;html=1;align=center;verticalLabelPosition=bottom;verticalAlign=top;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="156" y="410" width="40" height="95" as="geometry" />
+          <mxGeometry x="40" y="386.5" width="40" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-3" target="cKnyVmgL8Dwh8mg7-z-A-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="434" />
+              <mxPoint x="220" y="301" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="cKnyVmgL8Dwh8mg7-z-A-3" value="Oxygen Flow meter&lt;br&gt;and pressure regulator" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/common-version-3-0/1024/Meter-128.png" vertex="1" parent="1">
-          <mxGeometry x="270" y="350" width="88" height="88" as="geometry" />
+          <mxGeometry x="156" y="410" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-5" target="cKnyVmgL8Dwh8mg7-z-A-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-5" value="" style="verticalLabelPosition=bottom;align=center;dashed=0;html=1;verticalAlign=top;shape=mxgraph.pid.piping.hose_connection;pointerEvents=1;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="240" y="284" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-6" target="cKnyVmgL8Dwh8mg7-z-A-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000FF;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-6" target="cKnyVmgL8Dwh8mg7-z-A-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="200" />
+              <mxPoint x="190" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-42" value="Monitors flow" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="cKnyVmgL8Dwh8mg7-z-A-41">
+          <mxGeometry x="-0.4341" y="29" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-6" value="SFM3300-AW&lt;br&gt;Flow sensor" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519618-117_CoverFlow-128.png" vertex="1" parent="1">
+          <mxGeometry x="280" y="274" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-10" target="cKnyVmgL8Dwh8mg7-z-A-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-10" value="OEM-EP&lt;br&gt;Pressure&lt;br&gt;Regulator" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/miscellaneous-12/24/miscellaneous-25-128.png" vertex="1" parent="1">
+          <mxGeometry x="370" y="269" width="45" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.85;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-52" target="cKnyVmgL8Dwh8mg7-z-A-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="644" y="291.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-12" target="cKnyVmgL8Dwh8mg7-z-A-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-12" value="Humidifier" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="450" y="260" width="120" height="87.25" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-40" value="Controls speed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-17" target="cKnyVmgL8Dwh8mg7-z-A-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="170" />
+              <mxPoint x="85" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-17" target="cKnyVmgL8Dwh8mg7-z-A-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="204" y="150" />
+              <mxPoint x="393" y="150" />
+              <mxPoint x="393" y="260" />
+              <mxPoint x="392" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-44" value="Controls output pressure" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="cKnyVmgL8Dwh8mg7-z-A-43">
+          <mxGeometry x="-0.3836" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-58" value="Turns on and off" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.502;entryY=-0.132;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;strokeColor=#FF0000;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-17" target="cKnyVmgL8Dwh8mg7-z-A-50">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="130" />
+              <mxPoint x="476" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-59" value="Turns on and off" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.506;entryY=-0.021;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;strokeColor=#FF0000;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-17" target="cKnyVmgL8Dwh8mg7-z-A-49">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="110" />
+              <mxPoint x="540" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-17" value="Arduino Board" style="dashed=0;outlineConnect=0;html=1;align=right;labelPosition=left;verticalLabelPosition=top;verticalAlign=bottom;shape=mxgraph.weblogos.arduino;fillColor=#36868D;strokeColor=none" vertex="1" parent="1">
+          <mxGeometry x="170" y="64" width="67.4" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-23" target="cKnyVmgL8Dwh8mg7-z-A-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="310" />
+              <mxPoint x="760" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1.07;exitY=-0.008;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-23" target="cKnyVmgL8Dwh8mg7-z-A-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="709" y="351" />
+              <mxPoint x="710" y="351" />
+              <mxPoint x="710" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-23" value="" style="verticalLabelPosition=bottom;align=center;dashed=0;html=1;verticalAlign=top;shape=mxgraph.pid.piping.hose_connection;pointerEvents=1;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="710" y="297.5" width="20" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-48" value="Monitors exhale flow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;strokeColor=#0000FF;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-26">
+          <mxGeometry x="0.4006" relative="1" as="geometry">
+            <mxPoint x="580" y="380" as="sourcePoint" />
+            <mxPoint x="200" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="670" y="60" />
+              <mxPoint x="237" y="60" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-26" value="SFM3300-AW&lt;br&gt;Flow sensor" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519618-117_CoverFlow-128.png" vertex="1" parent="1">
+          <mxGeometry x="650" y="380" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-27" value="Standard Tube &lt;br&gt;and Mask" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/outbreak-epidemic/100/Disease-22-128.png" vertex="1" parent="1">
+          <mxGeometry x="760" y="284.5" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-33" value="Y-piece" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="214" y="259" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-34" value="Y-piece with&lt;br&gt;non-return valve" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="669" y="260" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-47" value="Sends settings" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000FF;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-46" target="cKnyVmgL8Dwh8mg7-z-A-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-46" value="UI" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.cell_phone_generic;" vertex="1" parent="1">
+          <mxGeometry x="24" y="53" width="26" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-49" value="Heater" style="shape=mxgraph.pid.heat_exchangers.heat_exchanger_(coil_tubes);html=1;align=center;verticalLabelPosition=bottom;verticalAlign=top;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="308" width="60" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-50" value="Atomizer" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="460" y="290.5" width="31" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000FF;" edge="1" parent="1" source="cKnyVmgL8Dwh8mg7-z-A-52" target="cKnyVmgL8Dwh8mg7-z-A-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="619" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-57" value="Monitors humidity and temperature" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="cKnyVmgL8Dwh8mg7-z-A-56">
+          <mxGeometry x="0.272" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKnyVmgL8Dwh8mg7-z-A-52" value="Humidity and&lt;br&gt;temperature&lt;br&gt;sensor" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/photographer-7/128/light-meter-measurement-sensor-device-128.png" vertex="1" parent="1">
+          <mxGeometry x="604" y="288" width="30" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
