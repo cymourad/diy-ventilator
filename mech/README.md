@@ -43,8 +43,8 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 
 ### Tube and Mask
 * These are standard tube and mask to connect to the patient.
-* An example tube can be found [here]() and an example mas can be found [here]().
+* An example tube can be found [here](https://cpapmachinescanada.ca/products/resmed-standard-tube-6-feet-and-9-feet?variant=49938448967) and masks are determined [based on the patient's features](https://www.oxygenconcentratorstore.com/cpap-mask-sizing-guide-and-maintenance/#).
 
 ### Oxygen tank and oxygen regulator
-* This is the source of Oxygen to regulate FiO2 higer than 21%. The regulator 
-* These parts can be purchased or rented. They are standard parts so any combination should work. An example can be found [here]().
+* This is the source of Oxygen to regulate FiO2 higer than 21%. The regulator controls the pressure going out of the compressed oxygen tank to (typically) 3-5 bar. While
+* These parts can be purchased or rented. They are standard parts so any combination should work. An example of the flow meter and regulator can be found [here](https://www.emrn.ca/en/respiratory/oxygen-regulators/o-two-oxygen-regulator-0-25-lpm-all-brass.html).
