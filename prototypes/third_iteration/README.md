@@ -7,7 +7,7 @@ After studying humidifiers for the day, we learnt the following:
 * temperature of air drops significantly across the tube. So industry either uses a tube that has a heater in it, or regulates the air temperature to 50 degress Celsius so that by the time it travels the standard length tube it arrives to the patient at 37 degress Celsius.
 
 Upon some discussions around the trade-offs between accuracy, cost, availabilty of material and ease of making, we arrived to the following design.
-![humidifer design](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/third_iteration/humidifer_desin.jpeg "Humidifer Design")
+![humidifer design](https://github.com/cymourad/diy-ventilator/blob/master/prototypes/third_iteration/humidifer_design.jpeg "Humidifer Design")
 
 An atomizer (like [this one](https://www.amazon.com/Gikfun-Ultrasonic-Ceramics-Sealing-Diffuser/dp/B075CHT2HY)) is primairly responsible for controlling the humidity level. An immersion heater (like [this one](https://www.walmart.ca/en/ip/Portable-Safe-Car-12V-24V-Immersion-Water-Heater-Auto-Electric-Tea-Coffee-Water-Heater/5EUK9APPV4YD)) is primairly responsible for heating the air to 50 degrees Celsius and it also heats up the water so it will affect the humidity slightly. A humidity and temperature sensor (like the [DHT22](https://www.amazon.com/AZDelivery-Digital-Temperature-Humidity-Raspberry/dp/B07F86WXR7/ref=sr_1_3?keywords=dht22&qid=1585283973&sr=8-3)) will provide feedback to adjust both the temperature and humidity.
 
