@@ -1,6 +1,6 @@
 # DIY-Ventialtor Mechanical Parts
 This directory contains the CAD files of the parts that must be 3D-printed to make the ventilator, as well as the readily-available parts we used (and potential equivalent parts) to make the design below.
-![Ventilator Block Diagram Design](https://github.com/cymourad/diy-ventilator/blob/master/mech/ventilator_block_diagram.jpeg "Ventilator Block Diagram")
+![Ventilator Block Diagram Design](https://github.com/cymourad/diy-ventilator/blob/master/mech/block_diag.jpg "Ventilator Block Diagram")
 
 ## CAD Parts
 
