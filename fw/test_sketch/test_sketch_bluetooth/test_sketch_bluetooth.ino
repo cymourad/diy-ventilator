@@ -19,6 +19,7 @@ void loop()
 {
   HM10.listen();  // listen the HM10 port
   while (HM10.available() > 0) {   // if HM10 sends something then read
+    Serial.println("HM-10 is available!");
     appData = HM10.read();
     inData = String(appData);  // save the data in string format
     Serial.write(appData);
