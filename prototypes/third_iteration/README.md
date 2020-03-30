@@ -31,3 +31,8 @@ This motor blower comes with a shell to amplify pressures (just like the leaf-bl
 This graph means that we can deliver up to 200 L/min and still get the required 40 cmH2O. We only to deliver 60-120 L/min, so we can definetely use this fan.
 
 The next challenge we faced is that oxygen tanks usually deliver pressure between 3 and 5 bars, which is 3000 to 5000 cmH2O. So, tommorw, we need to find a way to bring this pressure down signiicatly to the 40 cmH2O range that the blower is gonna provide to be able to blend them with the flow rate rations in the table that John generated.
+
+## Tidal Volume (Vt)
+Our ventilator will be monitoring the exhaled tidal volme and will give the operator an alert if the user is exhaling substantially more or less volume (let's say a +/- 10% window). The standard equation to calculate tidal volume for adults is calculated based on the patient's weight (in kgs) as follows: 
+> Vt = 7 mL/kg
+Thus, the operator will input the patient's weight into the UI and the app will calculate the desired Vt based 

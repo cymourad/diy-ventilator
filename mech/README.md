@@ -33,8 +33,8 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * This is the source of Oxygen to regulate FiO2 higer than 21%. The regulator controls the pressure going out of the compressed oxygen tank to (typically) 3-5 bar. While
 * These parts can be purchased or rented. They are standard parts so any combination should work. An example of the flow meter and regulator can be found [here](https://www.emrn.ca/en/respiratory/oxygen-regulators/o-two-oxygen-regulator-0-25-lpm-all-brass.html).
 
-### Y-Piece
-* This piece converges the airflow coming from the blower with the oxygen coming from the tank into one flow going to the proximal flow sensor (maybe it should be with non-return valves for each input stream to stay safe).
+### Y-Piece with non-return valves
+* This piece converges the airflow coming from the blower with the oxygen coming from the tank into one flow going to the proximal flow sensor. It has a non-return valves for each input stream lest one becomes faulty and overcomes flow of the other one.
 * Can be purchased [here](https://www.biodex.com/nuclear-medicine/products/lung-ventilation-systems/xenon-disposables/y-connector).
 
 ### Proximal Flow Sensor (Sensirion SFM3300-AW)
@@ -57,9 +57,13 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * This device outputs the current temperature and relative humidity to the Arduino.
 * Can be purchased [here](https://www.amazon.com/AZDelivery-Digital-Temperature-Humidity-Raspberry/dp/B07F86WXR7/ref=sr_1_3?keywords=dht22&qid=1585283973&sr=8-3).
 
-### Y-piece with non-return valve
+### Y-piece
 * This piece conncects the air flow coming from the machine with the tube, and lets the air exhaled back from the patient exit from a third outlet.
 * Can be purchased [here](https://www.biodex.com/nuclear-medicine/products/lung-ventilation-systems/xenon-disposables/y-connector).
+
+### PEEP valve
+* This device connects to the last Y-piece on the exhale end before the proximal flow sensor.
+* can be purchase [here](https://www.emsstuff.com/disposable-universal-peep-valve/).
 
 ### Tube and Mask
 * These are standard tube and mask to connect to the patient.
