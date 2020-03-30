@@ -34,8 +34,8 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * These parts can be purchased or rented. They are standard parts so any combination should work. An example of the flow meter and regulator can be found [here](https://www.emrn.ca/en/respiratory/oxygen-regulators/o-two-oxygen-regulator-0-25-lpm-all-brass.html).
 
 ### Y-Piece
-* This piece converges the airflow coming from the blower with the oxygen coming from the tank into one flow going to the proximal flow sensor.
-* Can be purchased [here]().
+* This piece converges the airflow coming from the blower with the oxygen coming from the tank into one flow going to the proximal flow sensor (maybe it should be with non-return valves for each input stream to stay safe).
+* Can be purchased [here](https://www.biodex.com/nuclear-medicine/products/lung-ventilation-systems/xenon-disposables/y-connector).
 
 ### Proximal Flow Sensor (Sensirion SFM3300-AW)
 * This device reads the current flow rate. Two will be used, one to blend oxygen and air, and the other to monitor the exhaled tidal volume.
@@ -59,7 +59,7 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 
 ### Y-piece with non-return valve
 * This piece conncects the air flow coming from the machine with the tube, and lets the air exhaled back from the patient exit from a third outlet.
-* Can be purchased [here]().
+* Can be purchased [here](https://www.biodex.com/nuclear-medicine/products/lung-ventilation-systems/xenon-disposables/y-connector).
 
 ### Tube and Mask
 * These are standard tube and mask to connect to the patient.
