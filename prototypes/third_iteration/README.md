@@ -35,4 +35,5 @@ The next challenge we faced is that oxygen tanks usually deliver pressure betwee
 ## Tidal Volume (Vt)
 Our ventilator will be monitoring the exhaled tidal volme and will give the operator an alert if the user is exhaling substantially more or less volume (let's say a +/- 10% window). The standard equation to calculate tidal volume for adults is calculated based on the patient's weight (in kgs) as follows: 
 > Vt = 7 mL/kg
-Thus, the operator will input the patient's weight into the UI and the app will calculate the desired Vt based 
+
+Thus, the operator will input the patient's weight into the UI and the app will calculate the desired Vt and send it to the Arduino. If the proximal sensor indicates that the exhaled Vt is more than 10% of this reference value, or less than 10% of it, it will gove the operator an alert.
