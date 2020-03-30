@@ -25,6 +25,7 @@ I am by no means working on this project alone. The team who is contributing to 
 * Bishoy Mikhail
 * Hani Zaki
 * Marina Saad
+* Nazmy Markos
 * Nicolas Mourad
 * Youhanna Iskander
 * Youssed Zaki
