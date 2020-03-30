@@ -2,7 +2,7 @@
 This is an attempt to make a simple DIY Ventilator using:
 1. Standard mask, tube, and 2 Y-pieces;
 2. 3D printer and filament;
-3. Arduino baord, BLE module and humidity sensor;
+3. Arduino board, BLE module and humidity sensor;
 4. Choice of battery that outputs ## V and has capacity of ##;
 5. Brushless DC motor blower;
 6. Oxygen tank, flow meter and regulator; and
