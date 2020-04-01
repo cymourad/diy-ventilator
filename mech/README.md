@@ -42,8 +42,8 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * Can be purchased [here](https://www.cpap.com/productSearch#::::HEPA%20filters).
 
 ### Pressure Reducing Valve
-* This piece takes the pressure down from 50 psi to 50 cmH2O for the pressure regulator to be able to reduce it to the desired range.
-* Can be purchase at [here]().
+* This piece takes the pressure down from 50 psi to 50 cmH2O for the pressure regulator to be able to reduce it to the desired range (will go down from 50 psi to 2 psi).
+* Can be purchase at [here](https://www.industrialcontrolsonline.com/johnson-controls-r-130).
 
 ### Parker OEM-EP (Miniature Electronic Pressure Controller)
 * This device takes any pressure greter than 40 cmH2O (can be variable pressure) and outputs a regulated pressure (10% - 100% of its input pressure.)
