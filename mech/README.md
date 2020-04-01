@@ -10,8 +10,8 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * TODO add special instructions to print (material, orientation, printer settings )
 * TODO add a picture of it printed
 
-### Oxygen Nozzle
-* This part connects to the Oxyen regulator to lower the pressure to match the pressure of the airflow.
+### HEPA Filter
+* this parts makes the air pass through a HEPA filter to disinfect it
 * TODO add special instructions to print (material, orientation, printer settings )
 * TODO add a picture of it printed
 
@@ -25,21 +25,25 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * This module connects to our microcontroller and it lets the user send the desired settings over bluetooth from their phone.
 * Can be pruchased from[here](https://www.amazon.com/DSD-TECH-Bluetooth-iBeacon-Arduino/dp/B06WGZB2N4)
 
-### Brushless DC Motor Blower
-* This part is respoinsible for generating our airflow and high pressure for the pressure regulator.
-* Can be prucahsed [here](https://www.alibaba.com/product-detail/12-24V-brushless-dc-motor-blower_60657146534.html?spm=a2700.7724857.normalList.2.37b52e3eF33iw2&s=p).
+### Air Compressor
+* This part is respoinsible for generating our airflow at 50 psi for belnding.
+* Can be prucahsed [here](https://www.healthproductsforyou.com/p-precision-medical-easyair-pressure-compressor.html).
 
 ### Oxygen tank and oxygen regulator
 * This is the source of Oxygen to regulate FiO2 higer than 21%. The regulator controls the pressure going out of the compressed oxygen tank to (typically) 3-5 bar. While
 * These parts can be purchased or rented. They are standard parts so any combination should work. An example of the flow meter and regulator can be found [here](https://www.emrn.ca/en/respiratory/oxygen-regulators/o-two-oxygen-regulator-0-25-lpm-all-brass.html).
 
-### Y-Piece with non-return valves
-* This piece converges the airflow coming from the blower with the oxygen coming from the tank into one flow going to the proximal flow sensor. It has a non-return valves for each input stream lest one becomes faulty and overcomes flow of the other one.
-* Can be purchased [here](https://www.biodex.com/nuclear-medicine/products/lung-ventilation-systems/xenon-disposables/y-connector).
+### Oxygen/Air Blender
+* Regulates the pressures of the air and oxygen and lets the user control their flows to achieve desired FiO2.
+* Can be purchased [here](https://www.tristatebiomedical.com/store/p160/Maxtec_MaxFLO2_Mini_Air_%2F_Oxygen_Mixer.html).
 
-### Proximal Flow Sensor (Sensirion SFM3300-AW)
-* This device reads the current flow rate. Two will be used, one to blend oxygen and air, and the other to monitor the exhaled tidal volume.
-* Its data sheet can be found [here](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/5_Mass_Flow_Meters/Datasheets/Sensirion_Mass_Flow_Meters_SFM3300_Datasheet.pdf).
+### HEPA Paper
+* This piece disinfects the air before going into the machine and eventually to the patient.
+* Can be purchased [here](https://www.cpap.com/productSearch#::::HEPA%20filters).
+
+### Pressure Reducing Valve
+* This piece takes the pressure down from 50 psi to 50 cmH2O for the pressure regulator to be able to reduce it to the desired range.
+* Can be purchase at [here]().
 
 ### Parker OEM-EP (Miniature Electronic Pressure Controller)
 * This device takes any pressure greter than 40 cmH2O (can be variable pressure) and outputs a regulated pressure (10% - 100% of its input pressure.)
@@ -57,9 +61,13 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 * This device outputs the current temperature and relative humidity to the Arduino.
 * Can be purchased [here](https://www.amazon.com/AZDelivery-Digital-Temperature-Humidity-Raspberry/dp/B07F86WXR7/ref=sr_1_3?keywords=dht22&qid=1585283973&sr=8-3).
 
-### Y-piece
+### Y-piece with non-return valve
 * This piece conncects the air flow coming from the machine with the tube, and lets the air exhaled back from the patient exit from a third outlet.
 * Can be purchased [here](https://www.biodex.com/nuclear-medicine/products/lung-ventilation-systems/xenon-disposables/y-connector).
+
+### Proximal Flow Sensor (Sensirion SFM3300-AW)
+* This device reads the current flow rate. Two will be used to monitor the exhaled tidal volume.
+* Its data sheet can be found [here](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/5_Mass_Flow_Meters/Datasheets/Sensirion_Mass_Flow_Meters_SFM3300_Datasheet.pdf).
 
 ### PEEP valve
 * This device connects to the last Y-piece on the exhale end before the proximal flow sensor.
