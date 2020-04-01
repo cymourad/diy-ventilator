@@ -43,7 +43,7 @@ This directory contains the CAD files of the parts that must be 3D-printed to ma
 
 ### Pressure Reducing Valve
 * This piece takes the pressure down from 50 psi to 50 cmH2O for the pressure regulator to be able to reduce it to the desired range (will go down from 50 psi to 2 psi).
-* Can be purchase at [here](https://www.industrialcontrolsonline.com/johnson-controls-r-130).
+* Can be purchase at [here](https://www.pneumaticplus.com/pneumaticplus-ppr2-n02bg-miniature-air-pressure-regulator-1-4-npt-with-embedded-gauge-bracket/).
 
 ### Parker OEM-EP (Miniature Electronic Pressure Controller)
 * This device takes any pressure greter than 40 cmH2O (can be variable pressure) and outputs a regulated pressure (10% - 100% of its input pressure.)
